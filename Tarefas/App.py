@@ -18,8 +18,8 @@ def add():
 
 @app.route("/delete/<int:index>", methods=['GET'])
 def delete(index):
-   if 0 <= index < len(tarefas):  # Verifica se o índice está dentro do intervalo
-        tarefas.pop(index)          # Remove a tarefa do índice especificado
+   if 0 <= index < len(tarefas):# Verifica se o índice está dentro do intervalo
+        tarefas.pop(index) # Remove a tarefa do índice especificado
    return redirect(url_for('index'))
 if __name__ == "__main__":
     app.run(debug=True)
